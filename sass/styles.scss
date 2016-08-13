@@ -1,0 +1,97 @@
+$font: 'Slabo 27px', serif;
+$titlefontsize: 66px; 
+$paddingContent: 80px;
+$contfontsize-princi:40px;
+$contfontsize-sub:32px;
+$autorfontsize: 10px; 
+$marginautor: 20px;
+$margintop: 5px;  
+$anchoCuadroPrincipal: 1024px; 
+$altoCuadros: 350px; 
+$anchoCuadroSub: 505px; 
+$espacioCuadroSubs: 14px; 
+$padding-leftSubs: 40px;
+$fondoCuadroPrincipal: url("/images/image1.jpg");
+$fondoCuadroSub1: url("/images/image2.jpg");
+$fondoCuadroSub2: url("/images/image3.jpg");
+//colocando stylo de letra
+body{
+  font-family: $font;
+}
+//definiendo opciones de contenedor
+.contenedor{
+  position: absolute;
+  margin-left: calc( 50% - 512px);
+}
+
+//estilo para titulo general
+.title{
+  text-align: center;
+  font-size: $titlefontsize;
+}
+//estilos para contenido dentro de cuadros
+.contenido-titulo{
+    position: relative;
+    color: white;
+    padding-top: $paddingContent;
+    margin-left: auto;
+  }
+  .contenido-autor{
+    position: relative;
+    color: white;
+    font-size: $autorfontsize;
+    text-transform: uppercase;
+    margin-top: $marginautor;
+
+    span{
+      border-top: 1px solid white;
+      padding-top: $margintop; 
+  }
+}
+//definiendo transparencia y variacion cuando este mouse over
+.layer{
+  background-color: rgba(0, 0, 0, 0.50);
+  width: 100%;
+  height: 100%;
+}
+.layer:hover{
+   background-color: rgba(0, 0, 0, 0.75);
+}
+
+//definiendo estilo especifico para contenido en cuadro grande
+.cuadro_principal{
+  width: $anchoCuadroPrincipal;
+  height: $altoCuadros;
+  background-image: $fondoCuadroPrincipal;
+
+  .contenido-titulo{
+    text-align: center;
+    color: white;
+    font-size: $contfontsize-princi;
+  }
+  .contenido-autor{
+    text-align: center;
+  }
+}
+//definiendo estilo especifico para contenido los cuadros pequeños
+.cuadro_sub{
+  width: $anchoCuadroSub;
+  height: $altoCuadros;
+  float: left;
+  font-size: $contfontsize-sub;
+  color: white;
+  text-align: left;
+
+  &.uno{
+      background-image: $fondoCuadroSub1;
+      margin-right: $espacioCuadroSubs;
+  }
+  &.dos{
+      background-image: $fondoCuadroSub2;
+  }
+  .layer{
+    .contenido-titulo,.contenido-autor{
+      padding-left: $padding-leftSubs;
+    }
+  }
+}

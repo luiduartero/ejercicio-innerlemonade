@@ -1,0 +1,60 @@
+body {
+  font-family: "Slabo 27px", serif; }
+
+.contenedor {
+  position: absolute;
+  margin-left: calc( 50% - 512px); }
+
+.title {
+  text-align: center;
+  font-size: 66px; }
+
+.contenido-titulo {
+  position: relative;
+  color: white;
+  padding-top: 80px;
+  margin-left: auto; }
+
+.contenido-autor {
+  position: relative;
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 20px; }
+  .contenido-autor span {
+    border-top: 1px solid white;
+    padding-top: 5px; }
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%; }
+
+.layer:hover {
+  background-color: rgba(0, 0, 0, 0.75); }
+
+.cuadro_principal {
+  width: 1024px;
+  height: 350px;
+  background-image: url("/images/image1.jpg"); }
+  .cuadro_principal .contenido-titulo {
+    text-align: center;
+    color: white;
+    font-size: 40px; }
+  .cuadro_principal .contenido-autor {
+    text-align: center; }
+
+.cuadro_sub {
+  width: 505px;
+  height: 350px;
+  float: left;
+  font-size: 32px;
+  color: white;
+  text-align: left; }
+  .cuadro_sub.uno {
+    background-image: url("/images/image2.jpg");
+    margin-right: 14px; }
+  .cuadro_sub.dos {
+    background-image: url("/images/image3.jpg"); }
+  .cuadro_sub .layer .contenido-titulo, .cuadro_sub .layer .contenido-autor {
+    padding-left: 40px; }
